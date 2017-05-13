@@ -1,8 +1,13 @@
 import java.util.Scanner;
 
 class BasicExample {
-    public static void main(String[ ] args) {
-    	// user input
+	static void sayHello() {
+	    System.out.println("Hello World!");
+	}
+	
+	// example user input
+	static void userInput() {
+		// user input
         Scanner input = new Scanner(System.in);
         
         System.out.print("Enter your name: ");
@@ -14,16 +19,18 @@ class BasicExample {
         System.out.println(String.format("%s, your age is %d", username, age));
         
         input.close();
-    	
-    	// hello world
-    	System.out.println("Hello World");
-    	
-    	// string array
+	}
+	
+	// example string array
+	static void strArr() {
         String[ ] arr = { "A", "B", "Hello Array", "D"};
         System.out.println(arr[2]);
         System.out.println(arr.length); // array length
-        
-        // integer array
+	}
+	
+	// example integer array
+	static void intArr() {
+		// integer array
         int [ ] myIntArr = {6, 42, 3, 7};
         int sum=0;
         
@@ -31,13 +38,19 @@ class BasicExample {
            sum += myIntArr[x];
         }
         System.out.println(sum);
-        
-        // multidimensional array
+	}
+	
+	// example multidimensional array
+	static void multiArr() {
+		// multidimensional array
         int[ ][ ] sample = { {1, 2, 3}, {4, 5, 6} }; 
         int x = sample[1][0];
         System.out.println(x);
-        
-        // array quiz
+	}
+
+	// quiz 01: array quiz
+	static void quiz01() {
+		// array quiz
         int result = 0;
         for (int i = 0; i < 5; i++) {
           if (i == 3) { 
@@ -47,12 +60,20 @@ class BasicExample {
            }	
         }
         System.out.println("Array Quiz result:" + result);
-        
-        // for each loop
+	}
+	
+	// example for each loop
+	static void exampleForEachLoop() {
+		// for each loop
         int[ ] primes = {2, 3, 5, 7};
 
         for (int t: primes) {
            System.out.println(t); 
         }
+	}
+	
+    public static void main(String[ ] args) {
+        sayHello();
+        quiz01();
     }
 }

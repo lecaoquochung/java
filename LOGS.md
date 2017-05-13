@@ -22,3 +22,12 @@ class MyClass {
   }
 }
 ```
+
+# Class
+- Identity, Attribute, Behavior
+```
+# Method
+static void sayHello() {
+    System.out.println("Hello World!");
+  }
+```
