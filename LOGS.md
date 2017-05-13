@@ -25,9 +25,33 @@ class MyClass {
 
 # Class
 - Identity, Attribute, Behavior
+- Method overloading http://stackoverflow.com/questions/997482/does-java-support-default-parameter-values
 ```
 # Method
 static void sayHello() {
     System.out.println("Hello World!");
+ }
+ 
+# Method with return
+static int sum(int val1, int val2) {
+  return val1 + val2;
+}
+
+# Reference Type
+public class MyClass {
+  public static void main(String[ ] args) {
+    Person j;
+    j = new Person("John");
+    j.setAge(20);
+    celebrateBirthday(j);
+    System.out.println(j.getAge());
   }
+  static void celebrateBirthday(Person p) {
+    p.setAge(p.getAge() + 1);
+  }
+}
+//Outputs "21"
+
+# Constant
+public static final double PI = 3.14; 
 ```

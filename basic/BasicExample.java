@@ -1,8 +1,32 @@
 import java.util.Scanner;
 
+import samples.Vehicle;
+
 class BasicExample {
-	static void sayHello() {
-	    System.out.println("Hello World!");
+	public static void main(String[ ] args) {
+        sayHello("World!");
+        quiz01();
+        
+        int x = sum(5,7);
+        System.out.println("Method return value: " + x);
+        
+        // object Animal
+        Animal dog = new Animal();
+        dog.bark();
+        
+        // object Vehicle
+        Vehicle honda = new Vehicle();        
+        honda.setColor("Blue");
+        System.out.printf(honda.getColor());
+        honda.horn();
+        System.out.println(Vehicle.COUNT);
+    }
+	
+	// hello world
+	static void sayHello(String name) {
+//		TODO default value in java
+//		Reference http://stackoverflow.com/questions/997482/does-java-support-default-parameter-values
+	    System.out.println("Hello" + " " + name);
 	}
 	
 	// example user input
@@ -59,7 +83,7 @@ class BasicExample {
              result += i;
            }	
         }
-        System.out.println("Array Quiz result:" + result);
+        System.out.println("Quiz 01 result:" + result);
 	}
 	
 	// example for each loop
@@ -72,8 +96,18 @@ class BasicExample {
         }
 	}
 	
-    public static void main(String[ ] args) {
-        sayHello();
-        quiz01();
-    }
+	// example static method with return value
+	static int sum(int val1, int val2) {
+	  return val1 + val2;
+	}
+	
+	// example return max value
+	static int max(int a, int b) {
+		if(a > b) {
+			return a;
+		} else {
+			return b;
+		}
+	}
+	
 }
