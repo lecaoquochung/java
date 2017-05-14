@@ -1,6 +1,6 @@
 import java.util.Scanner;
-
 import samples.Vehicle;
+import samples.Car;
 
 class BasicExample {
 	public static void main(String[ ] args) {
@@ -15,11 +15,15 @@ class BasicExample {
         dog.bark();
         
         // object Vehicle
-        Vehicle honda = new Vehicle();        
-        honda.setColor("Blue");
-        System.out.printf(honda.getColor());
-        honda.horn();
+        Vehicle AAA = new Vehicle();        
+        AAA.setColor("Blue");
+        System.out.printf(AAA.getColor());
+        AAA.horn();
         System.out.println(Vehicle.COUNT);
+        
+        // example inheritance car form vehicle
+        Car HV1 = new Car();
+        HV1.setBrand("Toyota");
     }
 	
 	// hello world
@@ -103,7 +107,16 @@ class BasicExample {
 	
 	// example return max value
 	static int max(int a, int b) {
-		if(a > b) {
+		if (a > b) {
+			return a;
+		} else {
+			return b;
+		}
+	}
+	
+	// method overloading by datatype
+	static double max (double a, double b) {
+		if (a > b) {
 			return a;
 		} else {
 			return b;
